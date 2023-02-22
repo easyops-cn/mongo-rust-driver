@@ -213,7 +213,7 @@ impl Message {
         })
     }
 
-    pub(crate) fn read_op_compressed(mut reader: &[u8], header: &Header) -> Result<Message> {
+    pub(crate) fn read_op_compressed(mut reader: &[u8], header: &Header) -> Result<Self> {
         // Read original opcode (should be OP_MSG)
         let original_opcode = reader.read_i32()?;
         if original_opcode != OpCode::Message as i32 {
