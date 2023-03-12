@@ -20,7 +20,6 @@ pub struct ReplyOp {
     pub start_from: u32,
     pub number_returned: u32,
     pub documents: Vec<Document>,
-    pub byte_documents: Option<Vec<Vec<u8>>>
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
